@@ -48,7 +48,7 @@ def list_current_addresses(args):
     if args.region == 'all':
         regions = AWSRegions
     else:
-        regions = [region]
+        regions = [args.region]
 
     for region in regions:
 
