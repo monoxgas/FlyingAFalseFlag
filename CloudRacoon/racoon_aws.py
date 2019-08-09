@@ -74,7 +74,7 @@ def main(arguments):
 
     parser = argparse.ArgumentParser(description=Description, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('region', choices=AWSRegions + ['all'], help="AWS Region to search")
-    parser.add_argument('-c', '--count', help="Number of IPs to try", default = 100)
+    parser.add_argument('-c', '--count', type=int, help="Number of IPs to try", default = 100)
     parser.add_argument('-l', '--list', help="List current IP info", action="store_true")
     parser.add_argument('-aK', '--access-key', help="AWS access key")
     parser.add_argument('-sK', '--secret-key', help="AWS secret key")
@@ -98,7 +98,7 @@ def main(arguments):
 
     print('\n[+] Connected to AWS. Hunting in {} ... (max: {})\n'.format(args.region, args.count))
 
-    for l in range(1, args.count):
+    for l in range(0, args.count):
 
         eip = engine.allocate_address(Domain='vpc')
         address = eip['PublicIp']
