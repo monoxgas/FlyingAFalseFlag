@@ -53,7 +53,7 @@ def main(arguments):
 
     parser = argparse.ArgumentParser(description=Description, formatter_class=argparse.RawDescriptionHelpFormatter)
 
-    parser.add_argument('project', help="GCP project to hold assets under", default = 'moonlit-oven-114021')
+    parser.add_argument('project', help="GCP project to hold assets under")
     parser.add_argument('-l', '--loops', help="Number of loops", default = 50)
     parser.add_argument('-r', '--regions', help="Regions to search (comma delimited)", default = 'us-east1,us-central1,us-west1,us-west2,us-east4')
     parser.add_argument('-lA', '--login-account', help="Service account for authentication")
