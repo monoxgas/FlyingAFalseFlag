@@ -10,7 +10,7 @@ There are three projects in this repo:
 
 ### CloudRacoon - Clound Hunting
 
-I've provided three scripts for AWS, Azure, and GCP hunting. This involves collecting a random IP, checking it's history for interesting records, and either keeping or releasing it. All of these scripts require valid authentication to the specific provider. **AWS is by far the best canidate** for collection. The process and fast and orphaned records are more common. It's not uncommon to achieve a 1-3% success rate during a cycle of 100 IPs (taking less than a couple minutes).
+I've provided three scripts for AWS, Azure, and GCP hunting. This involves collecting a random IP, checking it's history for interesting records, and either keeping or releasing it. All of these scripts require valid authentication to the specific provider. **AWS is by far the best canidate** for collection. The process is fast and there are many orphaned records. It's not uncommon to achieve a 1-3% success rate during a cycle of 100 IPs (taking less than a couple minutes).
 
 ```
 > python racoon_aws.py us-west-1 -aK <access_key> -sK <secret_key>
