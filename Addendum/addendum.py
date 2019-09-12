@@ -185,10 +185,7 @@ def main(args):
          print('[!] Failed to login')
          return
 
-    if not post_comment('2d06f9d4e8292747ef5ee9b653c9a55e5c88600b29ff9f644bae04337edd25ee', "Hello"):
-        print('[!] Failed to post tracking comment')
-        return
-
+    # Load whatever data you'd like here
     data = os.urandom(args.size * 1024)
 
     file_data = wrap_with_document(data)
